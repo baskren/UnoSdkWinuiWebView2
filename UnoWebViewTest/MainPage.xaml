@@ -1,0 +1,26 @@
+﻿<Page x:Class="UnoWebViewTest.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:UnoWebViewTest"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+  <ScrollViewer>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="40" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <TextBlock AutomationProperties.AutomationId="HelloTextBlock"
+          Text="Hello Uno Platform!"
+          HorizontalAlignment="Center"
+          VerticalAlignment="Center" />
+      <WebView2
+          x:Name="MyWebView"
+          Grid.Row="1"
+          DefaultBackgroundColor="Pink"
+          Source="https://www.microsoft.com"
+          HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch"
+          />
+    </Grid>
+  </ScrollViewer>
+</Page>
